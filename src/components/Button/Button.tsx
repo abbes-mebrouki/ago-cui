@@ -1,4 +1,5 @@
 import React from "react"
+import "./button.css"
 
 interface ButtonProps {
 	label: string
@@ -7,14 +8,7 @@ interface ButtonProps {
 const Button = ({ label }: ButtonProps) => {
 	return (
 		<button
-			style={{
-				color: "cyan",
-				backgroundColor: "#222",
-				padding: "10px 24px",
-				borderRadius: 16,
-				outlineColor: "none",
-				outline: "none",
-			}}
+			className="btn"
 		>
 			{label}
 		</button>
