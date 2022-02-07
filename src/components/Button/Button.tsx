@@ -1,17 +1,16 @@
 import React from "react"
-import "./button.css"
+import CButton from "./c_button"
 
-interface ButtonProps {
+export interface ButtonProps {
+	variant: "contained" | "outlined"
 	label: string
 }
 
-const Button = ({ label }: ButtonProps) => {
+const Button = ({ variant, label }: ButtonProps) => {
 	return (
-		<button
-			className="btn"
-		>
-			{label}
-		</button>
+		// <ThemeProvider theme={MuiTheme}>
+			<CButton variant={variant}>{label}</CButton>
+		// </ThemeProvider>
 	)
 }
 
