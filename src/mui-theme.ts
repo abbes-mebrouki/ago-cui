@@ -2,6 +2,7 @@ import { colors } from "@material-ui/core"
 import { createTheme } from "@material-ui/core/styles"
 import { Overrides as CoreOverrides } from "@material-ui/core/styles/overrides"
 import { ComponentsProps as CoreProps } from "@material-ui/core/styles/props"
+import { Shadows } from "@material-ui/core/styles/shadows"
 import { CSSProperties } from "@material-ui/styles"
 import { AutocompleteClassKey } from "@material-ui/lab"
 
@@ -126,6 +127,10 @@ const muiOverrides: Overrides = {
 	// },
 }
 
+const MuiShadows: Shadows = [
+	"none"
+]
+
 const muiProps: CoreProps = {
 	MuiButton: {
 		disableRipple: true,
@@ -161,7 +166,7 @@ interface Overrides extends CoreOverrides {
 }
 
 const MuiTheme = createTheme({
-	shadows: ["none"],
+	shadows: MuiShadows,
 	palette: { ...muiPalette },
 	overrides: { ...muiOverrides },
 	props: { ...muiProps },
